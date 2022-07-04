@@ -25,3 +25,7 @@ output "PRIVATE_SUBNET_CIDR" {
 output "PRIVATE_HOSTED_ZONE_ID" {
   value = var.PRIVATE_HOSTED_ZONE_ID
 }
+
+output "spot_subnet_id" {
+  value = data.terraform_remote_state.remote.outputs.subnet_id
+}
